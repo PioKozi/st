@@ -71,7 +71,7 @@ static unsigned int cursorthickness = 2;
  * bell volume. It must be a value between -100 and 100. Use 0 for disabling
  * it
  */
-static int bellvolume = 0;
+static int bellvolume = 5;
 
 /* default TERM value */
 char *termname = "st-256color";
@@ -97,13 +97,13 @@ unsigned int tabspaces = 8;
 static const char *colorname[] = {
 
   /* GRUVBOX */
-  [0] = "#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
+  [0] = "#1d2021", /* hard contrast: #1d2021 / medium contrast: #282828 / soft contrast: #32302f */
   [1] = "#cc241d", /* red     */
   [2] = "#98971a", /* green   */
   [3] = "#d79921", /* yellow  */
   [4] = "#458588", /* blue    */
   [5] = "#b16286", /* magenta */
-  [6] = "#689d6a", /* cyan    */
+  [6] = "#689d6a", /* aqua    */
   [7] = "#a89984", /* white   */
 
   /* 8 bright colors */
@@ -113,7 +113,7 @@ static const char *colorname[] = {
   [11] = "#fabd2f", /* yellow  */
   [12] = "#83a598", /* blue    */
   [13] = "#d3869b", /* magenta */
-  [14] = "#8ec07c", /* cyan    */
+  [14] = "#8ec07c", /* aqua    */
   [15] = "#ebdbb2", /* white   */
 };
 
@@ -193,7 +193,7 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
-    { MODKEY,               XK_l,           numlock,        {.i =  0} },
+    { MODKEY,               XK_l,           copyurl,        {.i =  0} },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
 };
