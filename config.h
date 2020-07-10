@@ -122,6 +122,7 @@ static const char *colorname[] = {
   [15] = "#ebdbb2", /* white   */
 };
 
+
 /*
  * Default colors (colorname index)
  * foreground, background, cursor
@@ -130,6 +131,11 @@ unsigned int defaultfg = 15;
 unsigned int defaultbg = 0;
 static unsigned int defaultcs = 15;
 static unsigned int defaultrcs = 257;
+
+/* Colors used for selection */
+unsigned int selectionbg = 8;
+unsigned int selectionfg = 0;
+static int ignoreselfg = 0;
 
 /*
  * Default shape of cursor
